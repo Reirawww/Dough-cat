@@ -1,0 +1,226 @@
+Create a complete beginner-friendly web game called **"Dough-Cat"**, a cute bakery shop simulation game.
+
+Use only:
+
+* HTML
+* CSS
+* Vanilla JavaScript
+
+Do not use React, Node.js, TypeScript, Bootstrap, Tailwind, or other frameworks.
+
+## PROJECT STRUCTURE
+
+Create these files:
+
+```text
+Dough-Cat/
+├── index.html
+├── ingredients.html
+├── style.css
+└── script.js
+```
+
+## 1. BAKERY PAGE - index.html
+
+This is the main bakery page.
+
+Show:
+
+* 🐱 Dough-Cat Bakery title
+* 💰 Coins
+* 📦 Current ingredient inventory
+* 🍩 Donut stock
+* 🍞 Bread stock
+
+Starting values:
+
+* Coins: 100
+* Flour: 5
+* Eggs: 3
+* Sugar: 5
+* Donuts: 0
+* Bread: 0
+
+Add these recipes:
+
+### Donut
+
+Requires:
+
+* 1 Flour
+* 1 Egg
+* 1 Sugar
+
+When the player clicks "Make Donut":
+
+* Remove the required ingredients
+* Add 1 Donut
+* Show a message saying the donut was made
+* If ingredients are insufficient, show an error message
+
+### Bread
+
+Requires:
+
+* 2 Flour
+* 1 Egg
+
+When the player clicks "Make Bread":
+
+* Remove the required ingredients
+* Add 1 Bread
+* Show a message
+* If ingredients are insufficient, show an error message
+
+Add selling buttons:
+
+* Sell Donut → +15 coins
+* Sell Bread → +12 coins
+
+If the player has no food to sell, show an error message.
+
+Add a button:
+
+**🛒 Ingredient Shop**
+
+Clicking it must open:
+
+```text
+ingredients.html
+```
+
+## 2. INGREDIENT SHOP - ingredients.html
+
+This must be a completely separate page from the bakery.
+
+Show:
+
+* 🛒 Ingredient Shop title
+* 💰 Current Coins
+* 🌾 Flour
+* 🥚 Egg
+* 🍬 Sugar
+* 🥛 Milk
+* 🧈 Butter
+
+For now, make these ingredients purchasable:
+
+### Flour
+
+Price: 5 coins
+Buy 1 Flour
+
+### Egg
+
+Price: 4 coins
+Buy 1 Egg
+
+### Sugar
+
+Price: 3 coins
+Buy 1 Sugar
+
+### Milk
+
+Price: 6 coins
+Buy 1 Milk
+
+### Butter
+
+Price: 7 coins
+Buy 1 Butter
+
+When buying:
+
+* Check if the player has enough coins
+* Subtract the price
+* Add 1 ingredient
+* Update the displayed coins and inventory
+* Show a success message
+* If coins are insufficient, show an error message
+
+Add:
+
+**🏠 Back to Bakery**
+
+This button must return to:
+
+```text
+index.html
+```
+
+## 3. IMPORTANT: SAVE GAME DATA
+
+Use JavaScript `localStorage`.
+
+The following data must remain saved when the player changes pages:
+
+* Coins
+* Flour
+* Eggs
+* Sugar
+* Milk
+* Butter
+* Donuts
+* Bread
+
+For example:
+
+```javascript
+localStorage.setItem(...)
+localStorage.getItem(...)
+```
+
+The player must NOT lose their coins or ingredients when going from:
+
+```text
+Bakery
+↓
+Ingredient Shop
+↓
+Bakery
+```
+
+## 4. DESIGN
+
+Make the game look cute and cozy.
+
+Style:
+
+* Soft bakery aesthetic
+* Warm cream/pastel background
+* Rounded cards
+* Rounded buttons
+* Cute emojis
+* Simple layout
+* Clean readable fonts
+* Small hover animation on buttons
+
+Make it responsive so it works on both desktop and mobile.
+
+Do not make the design overly complicated.
+
+## 5. CODE REQUIREMENTS
+
+Make sure:
+
+* `index.html` loads `style.css` and `script.js`
+* `ingredients.html` loads `style.css` and `script.js`
+* There is no duplicated game-state system
+* Use `localStorage` as the single source of saved game data
+* Avoid JavaScript errors
+* Buttons must actually work
+* Page navigation must actually work
+* Inventory numbers must update immediately
+* Coins must update immediately
+
+Add comments in the JavaScript explaining important parts because I am a beginner learning web development.
+
+Finally, provide the complete code for all four files separately:
+
+1. `index.html`
+2. `ingredients.html`
+3. `style.css`
+4. `script.js`
+
+Do not omit any code.
